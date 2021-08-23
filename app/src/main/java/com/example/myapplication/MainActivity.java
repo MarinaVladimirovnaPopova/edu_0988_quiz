@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 checkAnswer(true);
-                result = questions[questionIndex] + "Ваш ответ: да";//  записываем вопрос и ответ на него в строковую переменную
+                result = questions[questionIndex] + " Ваш ответ: да";//  записываем вопрос и ответ на него в строковую переменную
                 showResults[questionIndex] = result; // добавляем в массив очередное значение  result
             }
         });
@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 checkAnswer(false);
-                result = questions[questionIndex] + "Ваш ответ: нет";//  записываем вопрос и ответ на него в строковую переменную
+                result = questions[questionIndex] + " Ваш ответ: нет";//  записываем вопрос и ответ на него в строковую переменную
                 showResults[questionIndex] = result; //добавляем в массив очередное значение  result
 
             }

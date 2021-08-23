@@ -19,8 +19,8 @@ public class ResultActivity extends AppCompatActivity {
         trueAnswersTextView = findViewById(R.id.trueAnswersTextView);//находим виджет на активности для отображения количества правильных ответов
         trueAnswersTextView.setText("Правильных ответов: "+Integer.toString(trueAnswers));//показываем, сколько правильных ответов на вопросы
         showResultsTextView = findViewById(R.id.showResultsTextView); //находим виджет  для отображения вопросов и ответов юзерана активности
-        for (int i = 0; i < 4; i++) {
-            showResultsTextView.append((i + 1) + " " + (showResults[i]) + "\n");
+        for (int i = 0; i < 5; i++) {
+            showResultsTextView.append((i +1) + " " + (showResults[i]) + "\n");
         }
     }
 }
