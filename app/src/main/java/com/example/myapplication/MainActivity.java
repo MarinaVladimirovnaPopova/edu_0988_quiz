@@ -60,10 +60,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view){
                 checkAnswer(true);
                 if (questionIndex == 4) {
-                    result = questions[questionIndex] + " Ваш ответ: нет";//  записываем вопрос и ответ на него в строковую переменную
+                    result = questions[questionIndex].getQuestionText() + " Ваш ответ: нет";//  записываем вопрос и ответ на него в строковую переменную
                     showResults[questionIndex] = result;//добавляем в массив очередное значение  result
                 }
-                result = questions[questionIndex-1] + " Ваш ответ: да";//  записываем вопрос и ответ на него в строковую переменную
+                result = questions[questionIndex-1].getQuestionText() + " Ваш ответ: да";//  записываем вопрос и ответ на него в строковую переменную
                 showResults[questionIndex-1] = result; // добавляем в массив очередное значение  result
             }
         });
@@ -72,10 +72,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 checkAnswer(false);
                 if (questionIndex == 4) {
-                    result = questions[questionIndex] + " Ваш ответ: нет";//  записываем вопрос и ответ на него в строковую переменную
+                    result = questions[questionIndex].getQuestionText() + " Ваш ответ: нет";//  записываем вопрос и ответ на него в строковую переменную
                     showResults[questionIndex] = result;//добавляем в массив очередное значение  result
                 }
-                result = questions[questionIndex-1] + " Ваш ответ: нет";//  записываем вопрос и ответ на него в строковую переменную
+                result = questions[questionIndex-1].getQuestionText() + " Ваш ответ: нет";//  записываем вопрос и ответ на него в строковую переменную
                 showResults[questionIndex-1] = result; //добавляем в массив очередное значение  result
 
             }

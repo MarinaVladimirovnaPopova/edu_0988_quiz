@@ -23,7 +23,7 @@
         android:id="@+id/showResultsTextView"
         android:layout_width="285dp"
         android:layout_height="465dp"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
