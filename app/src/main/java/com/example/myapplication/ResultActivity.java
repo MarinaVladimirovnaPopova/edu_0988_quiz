@@ -20,7 +20,7 @@ public class ResultActivity extends AppCompatActivity {
         trueAnswersTextView.setText("Правильных ответов: "+Integer.toString(trueAnswers));//показываем, сколько правильных ответов на вопросы
         showResultsTextView = findViewById(R.id.showResultsTextView); //находим виджет  для отображения вопросов и ответов юзерана активности
         for (int i = 0; i < 5; i++) {
-            showResultsTextView.append((i +1) + " " + (showResults[i]) + "\n");
+            showResultsTextView.append((i +1) + ".  " + (showResults[i]) + "\n");
         }
     }
 }

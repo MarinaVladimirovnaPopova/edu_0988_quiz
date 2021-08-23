@@ -59,16 +59,24 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 checkAnswer(true);
-                result = questions[questionIndex] + " Ваш ответ: да";//  записываем вопрос и ответ на него в строковую переменную
-                showResults[questionIndex] = result; // добавляем в массив очередное значение  result
+                if (questionIndex == 4) {
+                    result = questions[questionIndex] + " Ваш ответ: нет";//  записываем вопрос и ответ на него в строковую переменную
+                    showResults[questionIndex] = result;//добавляем в массив очередное значение  result
+                }
+                result = questions[questionIndex-1] + " Ваш ответ: да";//  записываем вопрос и ответ на него в строковую переменную
+                showResults[questionIndex-1] = result; // добавляем в массив очередное значение  result
             }
         });
         noBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 checkAnswer(false);
-                result = questions[questionIndex] + " Ваш ответ: нет";//  записываем вопрос и ответ на него в строковую переменную
-                showResults[questionIndex] = result; //добавляем в массив очередное значение  result
+                if (questionIndex == 4) {
+                    result = questions[questionIndex] + " Ваш ответ: нет";//  записываем вопрос и ответ на него в строковую переменную
+                    showResults[questionIndex] = result;//добавляем в массив очередное значение  result
+                }
+                result = questions[questionIndex-1] + " Ваш ответ: нет";//  записываем вопрос и ответ на него в строковую переменную
+                showResults[questionIndex-1] = result; //добавляем в массив очередное значение  result
 
             }
         });
@@ -101,10 +109,11 @@ public class MainActivity extends AppCompatActivity {
             intent.putExtra("showResults", showResults);//передаем массив с вопросами и ответами юзера
 
             startActivity(intent);//запускаем метод открытия активности
+
         }
         /*--------------------------*/
 
-        questionIndex = (questionIndex+1) % questions.length;;
+        else questionIndex = (questionIndex+1);;
         questionsTextView.setText(questions[questionIndex].getQuestionText());
 
 
