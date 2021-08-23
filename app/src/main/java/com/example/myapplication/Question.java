@@ -10,10 +10,12 @@ public class Question {
     }
 
     public int getQuestionText() {
+
         return questionText;
     }
 
     public boolean isAnswerTrue() {
+
         return answerTrue;
     }
 }
