@@ -60,11 +60,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view){
                 checkAnswer(true);
                 if (questionIndex == 4) {
-                    result = questions[questionIndex].getQuestionText() + " Ваш ответ: нет";//  записываем вопрос и ответ на него в строковую переменную
+                    result =  getString(questions[questionIndex].getQuestionText()) + "\nВаш ответ: да\n";//  записываем вопрос и ответ на него в строковую переменную
                     showResults[questionIndex] = result;//добавляем в массив очередное значение  result
                 }
-                result = questions[questionIndex-1].getQuestionText() + " Ваш ответ: да";//  записываем вопрос и ответ на него в строковую переменную
+                result =  getString(questions[questionIndex-1].getQuestionText()) + "\nВаш ответ: да\n";//  записываем вопрос и ответ на него в строковую переменную
                 showResults[questionIndex-1] = result; // добавляем в массив очередное значение  result
+                /*String value = getString(questions[questionIndex].getQuestionText());*/
             }
         });
         noBtn.setOnClickListener(new View.OnClickListener() {
@@ -72,10 +73,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 checkAnswer(false);
                 if (questionIndex == 4) {
-                    result = questions[questionIndex].getQuestionText() + " Ваш ответ: нет";//  записываем вопрос и ответ на него в строковую переменную
+                    result =  getString(questions[questionIndex].getQuestionText()) + "\nВаш ответ: нет\n";//  записываем вопрос и ответ на него в строковую переменную
                     showResults[questionIndex] = result;//добавляем в массив очередное значение  result
                 }
-                result = questions[questionIndex-1].getQuestionText() + " Ваш ответ: нет";//  записываем вопрос и ответ на него в строковую переменную
+                result =  getString(questions[questionIndex-1].getQuestionText()) + "\nВаш ответ: нет\n";//  записываем вопрос и ответ на него в строковую переменную
                 showResults[questionIndex-1] = result; //добавляем в массив очередное значение  result
 
             }
